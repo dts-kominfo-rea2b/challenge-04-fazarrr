@@ -11,7 +11,7 @@ const dates = [
 const createDate = (dataBaru, index) => {
   const sortDate = [];
     for (let i = 0 ; i < dataBaru.length ; i++){
-      const result = new Date(dataBaru[i]).getTime() / 1000; sortDate.push(result);
+      const result = (new Date(dataBaru[i]).getTime() / 1000).toString(); sortDate.push(result);
     }
 
     if (index == -1){
@@ -19,7 +19,7 @@ const createDate = (dataBaru, index) => {
         return sortDate.join("-");
      } else {
         sortDate.sort((a, b) => a - b);
-        return sortDate;
+        return sortDate[index];
       }
       }
 
