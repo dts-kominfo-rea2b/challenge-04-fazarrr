@@ -18,7 +18,7 @@ const createDate = (dataBaru, index) => {
       sortDate.sort((a, b) => a - b);
         return sortDate.join("-");
      } else {
-        sortDate.sort((a, b) => a - b);
+        sortDate.sort((a, b) => a + b);
         return sortDate[index];
      }
 };
