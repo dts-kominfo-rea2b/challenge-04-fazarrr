@@ -14,7 +14,7 @@ const createDate = (dataBaru, index) => {
       const result = (new Date(dataBaru[i]).getTime() / 1000).toString(); sortDate.push(result);
     };
 
-    if (index == null){
+    if (index == undefined){
       sortDate.sort((a, b) => a - b);
         return sortDate.join("-");
      } else {
